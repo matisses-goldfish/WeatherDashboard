@@ -17,7 +17,7 @@ function initPage() {
     const mainIndex = document.getElementById('mainIndex');
     const clearBtn = document.getElementById('clearBtn');
 
-    let searchHistory = JSON.parse(localStorage.getItem("search")) || [];
+    let history = JSON.parse(localStorage.getItem("search")) || [];
 
     const APIKey = "85de5af9399d565d7475e27094d9743a"
 
@@ -91,15 +91,15 @@ function initPage() {
             searchBtn.addEventListener("click", function () {
                 const searchInput = cityInput.value;
                 fetchWeather(searchInput);
-                searchHistory.push(searchInput);
-                localStorage.setItem("search", JSON.stringify(searchHistory));
+                history.push(searchInput);
+                localStorage.setItem("search", JSON.stringify(history));
                 renderSearchHistory();
             })
 
             // clears local history
             clearBtn.addEventListener("click", function () {
                 localStorage.clear();
-                searchHistory = [];
+                history = [];
                 renderSearchHistory();
             })
 
@@ -111,12 +111,12 @@ function initPage() {
         // when click, allows them to display the weather conditions for that location
             function renderSearchHistory() {
                 locationHistory.innerHTML = "";
-                for (let i = 0; i < searchHistory.length; i++) {
+                for (let i = 0; i < history.length; i++) {
                     const pastCity = document.createElement("input");
                     pastCity.setAttribute("type", "text");
                     pastCity.setAttribute("readonly", true);
                     pastCity.setAttribute("class", "form-control d-block bg-white");
-                    pastCity.setAttribute("value", searchHistory[i]);
+                    pastCity.setAttribute("value", history[i]);
                     pastCity.addEventListener("click", function () {
                         fetchWeather(pastCity.value);
                     })
@@ -126,8 +126,8 @@ function initPage() {
 
         // Take the last search term used and automatically inputs it as the default weather
             renderSearchHistory();
-            if (searchHistory.length > 0) {
-                fetchWeather(searchHistory[searchHistory.length - 1]);
+            if (history.length > 0) {
+                fetchWeather(history[history.length - 1]);
             }
             
      }
