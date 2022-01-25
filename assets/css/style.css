@@ -1,0 +1,141 @@
+.col {
+    height: 100%;
+}
+p{
+    color:black;
+}
+
+#title {
+    line-height: 100px;    
+    background: linear-gradient(90deg, #6fbeff 0%, #1e128d 100%);
+    height: 100px;
+
+    
+}
+
+#weatherDash {
+    font-style: normal;
+    font-size: 55px;
+    color: white;
+    text-align: center;
+}
+h3 {
+    font-weight: bolder;
+    margin: 2%;
+    font-size: 35px;
+    color: rgb(56, 56, 56);
+}
+h4 {
+    font-size: 20px;
+}
+
+#locationInput {
+    padding: auto;
+    margin: 1%;
+}
+.form-control{
+    border: solid 1px #000000;
+    border-radius: 5px;
+    height: 50px;
+}
+
+.searchBtn {
+    -webkit-appearance: none;
+    background-color: #6fbeff; 
+    color: rgb(255, 255, 255);
+    display: flex;
+    width: 80%;
+    border-radius: 10px;
+    border: none;
+    font-size: 20px;
+    line-height: 45px;
+    padding: auto;
+    margin: 1%;
+    margin-top: 3%;
+
+    height: 45px;
+    width: 100%;
+}
+.clearBtn{
+    background-color: #ff9b9b; 
+    color: rgb(255, 255, 255);
+    display: flex;
+    width: 80%;
+    border-radius: 10px;
+    border: none;
+    font-size: 20px;
+    line-height: 30px;
+    padding: auto;
+    margin: 1%;
+    margin-top: 3%;
+
+    height: 45px;
+    width: 100%;
+}
+
+#locations{
+    height: 500px;
+}
+
+hr {
+    border-top: solid 2px black;
+}
+
+#results {
+    height: 370px;
+    width: 98%;
+    border: solid 2px black;
+
+    margin-top: 2%;
+    margin-left: 2%;
+    margin-right: 1%;
+}
+
+#fiveday {
+    height: 100%;
+    width: 98%;
+    border: solid 2px black;
+
+    margin-top: 2%;
+    margin-left: 2%;
+    margin-right: 1%;
+
+}
+
+.card {
+    height: 200px;
+    width: 160px;
+    margin: 2%;
+    padding: 10px;
+
+    background-color: rgb(199, 203, 238);
+
+    box-shadow: 5px 5px 4px #8083af;
+    ;
+
+}
+
+
+img {
+    height: 100px;
+    width: 100px;
+    justify-content: center;
+}
+
+.uv-good {
+    background-color: rgb(182, 226, 182);
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.uv-medium {
+    background-color: rgb(255, 211, 181);
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.uv-bad {
+    background-color: rgb(250, 141, 141);
+    border-radius: 10px;
+    padding: 5px;
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <title>Weather Dashboard</title>
+</head>
+<body>
+    <!-- creating basic format -->
+    <!-- weather title -->
+    <div class="col text-center text-center" id="title">
+        <h1 id="weatherDash"> Weather Dashboard</h1>
+    </div>
+    <!-- main body -->
+    <div class="col">
+        <!-- search input feild & search history  -->
+        <div class="row">
+            <!-- search input feild -->
+            <div class="col-sm-3">
+                <h3>Search for a City:</h3>
+                <form id="locationForm">
+                <input class="form-control" type="text" id="cityInput" placeholder="Austin">
+                <button class="searchBtn justify-content-center" id="searchBtn"> Search </button>
+                </form>
+                <button class="btn clearBtn justify-content-center" id="clearBtn"> Clear </button>
+
+                <hr>  
+                <div class="col" id="locationHistory">                        
+                </div>
+            </div>
+
+            <!-- weather results & five-day forcast -->
+            <div class="col">
+
+                <!-- Weather Results -->
+                <div class="container"  id="results"> 
+                    <h2 id="locationName"></h3>
+                    <img id="openWeatherIcon" alt="weather icon"> 
+                    <h3 id=mainTemp></h4>
+                    <h5> Humidity: <span id="mainHumidity"></span></p>
+                    <h5> Wind Speed:<span id="mainWind"></span></p>
+                    <h5> UV Index: <span id="mainIndex" class=""></span></p>
+
+                </div>
+
+                <!-- Five day forcast -->
+                <div class= "container" id="fivedayForecast">
+                    <h3> Five Day Forcast:</h3>
+                    <div class="row">
+                        <div class="card" id="forecastCard"></div>
+                        <div class="card" id="forecastCard"></div>
+                        <div class="card" id="forecastCard"></div>
+                        <div class="card" id="forecastCard"></div>
+                        <div class="card" id="forecastCard"></div>
+
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+    <!-- using axios to easily fetch api info -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+
+
+</body>
+
+</html>
